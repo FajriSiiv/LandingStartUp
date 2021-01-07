@@ -1,0 +1,218 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: fit-content;
+  background-color: transparent;
+  position: fixed;
+  z-index: 9;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 70px;
+}
+
+header .container .logo {
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: default;
+  color: #7b1fa2;
+}
+
+header .container .menu-link {
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+  align-items: center;
+  font-weight: 400;
+}
+
+header .container .menu-link a {
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  transition: all 0.3s;
+}
+
+header .container .menu-link a:hover, header .container .menu-link a:focus {
+  color: #ffa726;
+}
+
+header .container .menu-link button {
+  border: none;
+  padding: 5px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: transparent;
+  outline: 2px solid #ffffff;
+  transition: all 0.4s ease-in-out;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+header .container .menu-link button:hover {
+  background-color: #7b1fa2;
+  color: #ffa726;
+  outline: none;
+}
+
+header i.fa {
+  display: none;
+  color: white;
+  font-size: 23px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+@media screen and (max-width: 768px) {
+  header i.fa {
+    display: block;
+  }
+  header .container {
+    padding: 20px 15px;
+  }
+  header .container .logo {
+    font-size: 18px;
+    color: #ffa726;
+  }
+  header .container .menu-link {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: #7b1fa2;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    z-index: -9;
+    text-align: center;
+  }
+}
+
+/* Main-Page */
+.main-page {
+  width: 100%;
+  height: 100vh;
+}
+
+.main-page .container {
+  padding: 0 70px;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+  position: relative;
+}
+
+.main-page .container .main-text {
+  width: 40%;
+  cursor: default;
+}
+
+.main-page .container .main-text h1 {
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #7b1fa2;
+}
+
+.main-page .container .main-text h3 {
+  font-size: 33px;
+  color: #ffa726;
+  text-transform: capitalize;
+  font-weight: 400;
+  margin: 15px 0;
+}
+
+.main-page .container .main-text p {
+  font-size: 16px;
+  color: #7b1fa2;
+  line-height: 28px;
+  margin-bottom: 15px;
+}
+
+.main-page .container .main-text button {
+  font-size: 17px;
+  padding: 4px 13px;
+  border: none;
+  background-color: #ffa726;
+  outline: 2px solid white;
+  width: fit-content;
+  color: white;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.main-page .container .main-text button:hover {
+  background-color: #fff;
+  outline: 2px solid #ffa726;
+  color: #ffa726;
+}
+
+.main-page .container .main-img {
+  width: 60%;
+  position: relative;
+  text-align: right;
+}
+
+.main-page .container .main-img img {
+  width: 65%;
+  margin-left: 40px;
+}
+
+.main-page:before {
+  content: "";
+  width: 50%;
+  position: absolute;
+  display: block;
+  background-image: url("/img/bg-p.png");
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 2px bottom;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+  .main-page::before {
+    background-position: center center;
+    background-size: cover;
+  }
+  .main-page .container {
+    background-color: #3c0155;
+    padding: 10px 15px;
+  }
+  .main-page .container .main-text {
+    width: 100%;
+  }
+  .main-page .container .main-text h1 {
+    font-size: 40px;
+    color: #ffa726;
+  }
+  .main-page .container .main-text h3 {
+    font-size: 29px;
+  }
+  .main-page .container .main-text p {
+    font-size: 12px;
+    color: white;
+  }
+  .main-page .container .main-img {
+    display: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */
